@@ -32,7 +32,7 @@ npm run build
 npm run check
 ```
 
-The production site is written to `dist/`. The build also copies `index.html` to `404.html`, allowing direct React Router links to recover correctly on GitHub Pages.
+The production site is written to `dist/`. The build also generates a small `404.html` redirect that sends direct React Router requests through the deployed root document, then restores the original clean URL before React starts. This keeps refreshed routes working on GitHub Pages without hash-based URLs.
 
 ## Editing content
 
