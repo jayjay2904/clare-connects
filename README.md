@@ -15,21 +15,21 @@ This is an independent project. It has its own repository, content, deployment a
 
 ## Local development
 
-Requires Node.js 22+ and pnpm 10+.
+Requires Node.js 22+ and npm.
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 Open `http://localhost:5173`. Production and quality commands:
 
 ```bash
-pnpm lint
-pnpm typecheck
-pnpm test
-pnpm build
-pnpm check
+npm run lint
+npm run typecheck
+npm test
+npm run build
+npm run check
 ```
 
 The production site is written to `dist/`. The build also copies `index.html` to `404.html`, allowing direct React Router links to recover correctly on GitHub Pages.
@@ -102,4 +102,4 @@ The Privacy and Terms pages are explicitly starter copy. Before launch, complete
 
 ## Launch
 
-Use `LAUNCH_CHECKLIST.md` for the final approval sequence. At minimum: replace assets, confirm services, publish consented testimonials, connect the form endpoint, review legal pages, configure DNS, enforce HTTPS and run `pnpm check` from a clean clone.
+Use `LAUNCH_CHECKLIST.md` for the final approval sequence. At minimum: replace assets, confirm services, publish consented testimonials, connect the form endpoint, review legal pages, configure DNS, enforce HTTPS and run `npm run check` from a clean clone.

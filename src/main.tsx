@@ -4,4 +4,6 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './styles.css'
 
-createRoot(document.getElementById('root')!).render(<StrictMode><BrowserRouter><App/></BrowserRouter></StrictMode>)
+const basename = window.location.hostname.endsWith('github.io') ? '/clare-connects' : '/'
+
+createRoot(document.getElementById('root')!).render(<StrictMode><BrowserRouter basename={basename}><App/></BrowserRouter></StrictMode>)

@@ -10,7 +10,7 @@
     "lint": "eslint . --max-warnings 0",
     "test": "vitest run",
     "format": "prettier --write .",
-    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -37,6 +37,5 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "latest",
     "vitest": "latest"
-  },
-  "packageManager": "pnpm@10.14.0"
+  }
 }

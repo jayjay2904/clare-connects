@@ -11,5 +11,5 @@
 - [ ] Add the four GitHub Pages DNS records and `www` CNAME at the domain host.
 - [ ] Verify the custom domain in GitHub, enable Pages, then enforce HTTPS.
 - [ ] Test forms, navigation, metadata and 404 handling on the live domain.
-- [ ] Run `pnpm check` from a clean clone.
+- [ ] Run `npm run check` from a clean clone.
 - [ ] Confirm no secrets or personal-only files are committed.
