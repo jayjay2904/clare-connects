@@ -1,0 +1,16 @@
+import { ReactNode, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight, CalendarClock, Circle, CreditCard, Factory, Gauge, Handshake, HeartHandshake, House, Leaf, Lightbulb, Network, Plus, Radio, RefreshCw, Smartphone, Sparkles, Wifi, Zap, type LucideIcon } from 'lucide-react'
+
+const iconMap: Record<string, LucideIcon> = { CalendarClock, CreditCard, Factory, Gauge, Handshake, HeartHandshake, House, Leaf, Lightbulb, Network, Radio, RefreshCw, Smartphone, Sparkles, Wifi, Zap }
+
+export function PageHero({ eyebrow, title, intro, children, tone = 'light' }: { eyebrow: string; title: ReactNode; intro: string; children?: ReactNode; tone?: 'light' | 'dark' }) {
+  return <section className={`page-hero ${tone}`}><div className="orb orb-one" /><div className="orb orb-two" /><div className="page-hero-inner"><span className="eyebrow"><Sparkles />{eyebrow}</span><h1>{title}</h1><p>{intro}</p>{children}</div></section>
+}
+export function SectionHead({ eyebrow, title, intro, centre = false }: { eyebrow: string; title: ReactNode; intro?: string; centre?: boolean }) { return <div className={`section-head ${centre ? 'centre' : ''}`}><span className="eyebrow">{eyebrow}</span><h2>{title}</h2>{intro && <p>{intro}</p>}</div> }
+export function IconBox({ name }: { name: string }) { const Icon = iconMap[name] ?? Circle; return <span className="icon-box"><Icon /></span> }
+export function ServiceGrid({ items }: { items: { title: string; text: string; icon: string }[] }) { return <div className="service-grid">{items.map((item, i) => <article className="service-card" key={item.title}><div className="service-number">0{i + 1}</div><IconBox name={item.icon} /><h3>{item.title}</h3><p>{item.text}</p><ArrowUpRight className="card-arrow" /></article>)}</div> }
+export function Steps({ items }: { items: { title: string; text: string }[] }) { return <ol className="steps">{items.map((item, i) => <li key={item.title}><span>{String(i + 1).padStart(2, '0')}</span><div><h3>{item.title}</h3><p>{item.text}</p></div></li>)}</ol> }
+export function Faqs({ items }: { items: string[][] }) { const [open, setOpen] = useState(0); return <div className="faqs">{items.map(([q, a], i) => <div className={`faq ${open === i ? 'open' : ''}`} key={q}><button aria-expanded={open === i} onClick={() => setOpen(open === i ? -1 : i)}><span>{q}</span><Plus /></button>{open === i && <p>{a}</p>}</div>)}</div> }
+export function CTA({ title = 'Let’s find the right next step.', text = 'Tell Clare what you would like to make simpler. The first conversation is friendly, useful and without pressure.', label = 'Talk to Clare' }: { title?: string; text?: string; label?: string }) { return <section className="cta"><div className="cta-glow" /><span className="eyebrow">A useful conversation starts here</span><h2>{title}</h2><p>{text}</p><Link className="button button-gold" to="/contact">{label}<ArrowUpRight /></Link></section> }
+export function SplitFeature({ children, visual = 'connections' }: { children: ReactNode; visual?: string }) { return <div className="split-feature"><div className={`visual-panel ${visual}`}><div className="visual-ring"><Sparkles /></div><span>Clare Connects</span></div><div className="split-copy">{children}</div></div> }

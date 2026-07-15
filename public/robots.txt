@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://clareconnects.com/sitemap.xml
