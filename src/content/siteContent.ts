@@ -12,6 +12,7 @@ export const site = {
   portrait: asset('clare-headshot-studio.jpg'),
   portraitWarm: asset('clare-headshot-warm.jpg'),
   teamImage: asset('clare-connects-team.png'),
+  obLabsLogo: asset('ob-labs-logo.svg'),
   links: {
     opportunity: 'https://uw.partners/clare.and.john/partner/join',
     homeUtilities: 'https://uw.partners/clare.and.john/join',
