@@ -5,7 +5,7 @@ import { nav, site } from '../content/siteContent'
 import { Assistant } from './Assistant'
 
 function Logo() {
-  return <Link className="logo" to="/" aria-label="Clare Connects home"><span className="logo-mark">C<span>C</span></span><span>Clare <em>Connects</em></span></Link>
+  return <Link className="logo" to="/" aria-label="Clare Connects home"><img className="logo-image" src={site.logo} alt="" /><span>Clare <em>Connects</em></span></Link>
 }
 
 export function Layout() {
@@ -29,7 +29,7 @@ export function Layout() {
       <a className="mobile-email" href={`mailto:${site.email}`}>{site.email}</a>
     </div>}
     <main id="main"><Outlet /></main>
-    <footer className="footer"><div className="footer-top"><div><Logo /><p>Practical help, useful introductions and one trusted point of contact.</p></div><div><h2>Explore</h2>{nav.map((item) => <Link key={item.to} to={item.to}>{item.label}</Link>)}</div><div><h2>Stay connected</h2><a href={`mailto:${site.email}`}>{site.email}</a><p>{site.responseTime}</p><Link className="text-link" to="/contact">Start a conversation <ArrowUpRight size={16} /></Link></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Clare Connects</span><div><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></div><span className="made"><Sparkles size={14} /> Thoughtfully connected</span></div></footer>
+    <footer className="footer"><div className="footer-top"><div><Logo /><p>Practical help, useful introductions and one trusted point of contact.</p></div><div><h2>Explore</h2>{nav.map((item) => <Link key={item.to} to={item.to}>{item.label}</Link>)}</div><div><h2>Stay connected</h2><a href={`mailto:${site.email}`}>{site.email}</a><a className="social-link" href={site.social.linkedin} target="_blank" rel="noreferrer">Clare on LinkedIn <ArrowUpRight size={15} /></a><p>{site.responseTime}</p><Link className="text-link" to="/contact">Start a conversation <ArrowUpRight size={16} /></Link></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Clare Connects</span><div><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></div><span className="made"><Sparkles size={14} /> Thoughtfully connected</span></div></footer>
     <Assistant />
     <CookieNotice />
   </div>

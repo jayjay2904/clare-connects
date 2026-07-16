@@ -1,6 +1,6 @@
 # Clare Connects launch checklist
 
-- [ ] Replace portrait, logo, social-sharing image and app icons with approved assets.
+- [ ] Review the supplied portrait and logo placement; replace the social-sharing image and app icons with approved final assets.
 - [ ] Approve every service and page statement.
 - [ ] Add public telephone and social details.
 - [ ] Replace both testimonial placeholders with consented stories, or remove the section.

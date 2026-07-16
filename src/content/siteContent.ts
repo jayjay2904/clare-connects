@@ -4,8 +4,15 @@ export const site = {
   email: 'clare@clareconnects.com',
   phone: '', // CONTENT_TODO: confirm Clare's preferred public telephone number.
   responseTime: 'Clare aims to respond within two working days.',
-  social: { facebook: '', instagram: '', linkedin: '' }, // CONTENT_TODO: confirm public profiles.
-  portrait: '/assets/clare-portrait-placeholder.svg',
+  social: { facebook: '', instagram: '', linkedin: 'https://www.linkedin.com/in/clareconnects/' },
+  logo: '/assets/clare-connects-logo.png',
+  portrait: '/assets/clare-headshot-studio.jpg',
+  portraitWarm: '/assets/clare-headshot-warm.jpg',
+  links: {
+    opportunity: 'https://uw.partners/clare.and.john/join',
+    connectorRegistration: 'https://uw.partners/clare.and.john/connect',
+    connectorExplainer: 'https://vimeo.com/1200796333',
+  },
 }
 
 export const nav = [

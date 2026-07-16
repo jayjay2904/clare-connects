@@ -12,3 +12,24 @@
 @media(max-width:1050px){.desktop-nav{display:none}.menu-button{display:block;margin-left:auto}.header-cta{display:none}.home-hero{grid-template-columns:1fr .7fr}.reason-grid{grid-template-columns:repeat(3,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}.suit-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){h1{font-size:3.3rem}.section{padding-top:4.5rem;padding-bottom:4.5rem}.home-hero{grid-template-columns:1fr;padding-top:4rem}.home-hero h1{font-size:3.7rem}.hero-portrait{max-width:440px;margin:auto}.floating-card{left:-2%}.path-grid,.split-feature,.how,.connectors-preview,.faq-section,.challenge,.connector-definition,.connector-benefits,.form-section,.contact-layout,.learning{grid-template-columns:1fr}.path-card{min-height:300px}.visual-panel{min-height:430px}.reason-grid{grid-template-columns:1fr 1fr}.how>.steps{margin-top:2rem}.testimonials{grid-template-columns:1fr}.intro-band{grid-template-columns:1fr}.large-stat{font-size:8rem}.audience-grid,.connector-types,.suit-grid{grid-template-columns:1fr 1fr}.opportunity-intro{grid-template-columns:1fr}.quote-mark{display:none}.form-intro{position:static}.footer-top{grid-template-columns:1fr 1fr}.footer-top>div:first-child{grid-column:1/-1}.page-hero{min-height:560px}.page-hero h1{font-size:3.7rem}.disclaimer{display:block}.disclaimer strong{display:block;margin-bottom:10px}}
 @media(max-width:520px){body{font-size:15px}.header{height:72px}.logo-mark{width:38px;height:38px}.home-hero{min-height:auto;padding:3.5rem 20px}.home-hero h1,.page-hero h1{font-size:3rem}.hero-note{display:block}.hero-note span{margin:8px 0}.button-row{align-items:stretch}.button-row .button{width:100%}.service-grid,.reason-grid,.audience-grid,.connector-types,.suit-grid,.field-row{grid-template-columns:1fr}.service-card{min-height:260px}.page-hero{padding-left:20px;padding-right:20px}.faq-section .section-head{margin-bottom:1rem}.footer-top,.footer-bottom{display:block}.footer-top>div{margin-bottom:35px}.footer-bottom>*{margin:12px 0}.assistant-trigger span{display:none}.assistant-trigger{width:50px;height:50px;border-radius:50%;padding:0;justify-content:center}.cookie{left:10px;right:10px;bottom:10px;display:block}.cookie .button{margin-top:12px}.contact-form{padding:22px}.testimonial-section figure{padding:27px}}
+
+/* Approved Clare Connects brand assets and Connector information */
+.logo-image{width:48px;height:48px;object-fit:cover;border-radius:50%;box-shadow:0 5px 16px rgba(43,23,61,.18)}
+.footer .logo-image{border:1px solid rgba(232,214,168,.32);box-shadow:none}
+.visual-panel.has-image{display:block;background:var(--plum)}
+.visual-panel.has-image:before,.visual-panel.has-image:after{display:none}
+.visual-panel.has-image>img{width:100%;height:100%;min-height:570px;object-fit:cover;object-position:center top}
+.visual-panel.has-image>span{left:30px;right:auto;background:rgba(43,23,61,.88);padding:8px 12px;color:var(--pale-gold)}
+.social-link{display:flex!important;align-items:center;gap:7px;margin-top:10px;color:var(--pale-gold)!important;font-size:.78rem}
+.connector-rewards{background:var(--cream)}
+.reward-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:0 auto}
+.reward-grid article{background:var(--white);border-top:3px solid var(--gold);padding:36px;box-shadow:0 16px 45px rgba(43,23,61,.07)}
+.reward-grid svg{width:28px;height:28px;color:var(--purple);margin-bottom:22px}
+.reward-grid h3{font-family:var(--serif);font-size:1.45rem;margin-bottom:10px}
+.reward-grid p{color:var(--muted);margin:0}
+.connector-actions{max-width:820px;margin:40px auto 0;text-align:center}
+.connector-actions>p{color:var(--muted);font-size:.85rem}
+.connector-actions .button-row{justify-content:center}
+.connector-actions .text-link{align-self:center}
+@media(max-width:760px){.visual-panel.has-image>img{min-height:430px}.reward-grid{grid-template-columns:1fr}.connector-actions .button-row{align-items:center}}
+@media(max-width:520px){.logo-image{width:42px;height:42px}.logo{font-size:1.05rem}.reward-grid article{padding:28px}}
