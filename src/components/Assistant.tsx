@@ -3,7 +3,7 @@ import { Bot, Mail, RotateCcw, Send, Sparkles, X } from 'lucide-react'
 import { chatService } from '../services/chat'
 import { site } from '../content/siteContent'
 
-const suggestions = ['How can Clare help with my household bills?', 'Can Clare review my business utilities?', 'What is a Clare Connector?', 'How do I explore the opportunity?']
+const suggestions = ['How can Clare help with my household bills?', 'Can Clare review my business utilities?', 'What is a Clare Connector?', 'How do I join the team?']
 type Message = { role: 'assistant' | 'user'; text: string }
 const welcome: Message = { role: 'assistant', text: 'Hello, I’m the Clare Connects automated assistant. I can share general information from this website, but I cannot provide binding quotes or guarantee savings.' }
 

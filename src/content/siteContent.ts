@@ -10,8 +10,10 @@ export const site = {
   logo: asset('clare-connects-logo.png'),
   portrait: asset('clare-headshot-studio.jpg'),
   portraitWarm: asset('clare-headshot-warm.jpg'),
+  teamImage: asset('clare-connects-team.png'),
   links: {
     opportunity: 'https://uw.partners/clare.and.john/join',
+    homeUtilities: 'https://uw.partners/clare.and.john',
     connectorRegistration: 'https://uw.partners/clare.and.john/connect',
     connectorExplainer: 'https://vimeo.com/1200796333',
   },
@@ -22,7 +24,7 @@ export const nav = [
   { label: 'Home Utilities', to: '/home-utilities' },
   { label: 'Business Utilities', to: '/business-utilities' },
   { label: 'Connectors', to: '/connectors' },
-  { label: 'Join the Opportunity', to: '/join' },
+  { label: 'Join the Team', to: '/join' },
   { label: 'Contact Clare', to: '/contact' },
 ]
 
@@ -31,7 +33,7 @@ export const homeServices = [
   { title: 'Broadband', text: 'Compare connectivity options around the way your household actually uses them.', icon: 'Wifi' },
   { title: 'Mobile', text: 'Review mobile services alongside your other household essentials.', icon: 'Smartphone' },
   { title: 'Household review', text: 'Look across several essential services together, without juggling separate conversations.', icon: 'House' },
-  { title: 'Smart living', text: 'Discuss practical energy-saving and smart-home options where available.', icon: 'Lightbulb' },
+  { title: 'Insurance & protection', text: 'Explore home insurance, boiler cover and income protection options where available.', icon: 'ShieldCheck' },
   { title: 'Trusted introductions', text: 'Access relevant specialists through Clare’s network when your needs go further.', icon: 'Handshake' },
 ]
 
@@ -72,7 +74,7 @@ export const pageMeta: Record<string, { title: string; description: string }> = 
   '/home-utilities': { title: 'Home Utilities | Clare Connects', description: 'A personal, joined-up way to review essential household services.' },
   '/business-utilities': { title: 'Business Utilities | Clare Connects', description: 'Simplify business utilities, renewals and trusted specialist introductions.' },
   '/connectors': { title: 'Clare Connectors | Clare Connects', description: 'Create useful introductions and become part of Clare’s trusted network.' },
-  '/join': { title: 'Join the Opportunity | Clare Connects', description: 'Explore a flexible, relationship-led opportunity with Clare.' },
+  '/join': { title: 'Join the Team | Clare Connects', description: 'Explore a flexible, relationship-led opportunity with Clare and her supportive team.' },
   '/contact': { title: 'Contact Clare | Clare Connects', description: 'Start a friendly, straightforward conversation with Clare.' },
   '/privacy': { title: 'Privacy | Clare Connects', description: 'How Clare Connects handles website and enquiry information.' },
   '/terms': { title: 'Terms | Clare Connects', description: 'Starter website terms for Clare Connects.' },

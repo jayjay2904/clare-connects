@@ -5,7 +5,7 @@ import { nav, site } from '../content/siteContent'
 import { Assistant } from './Assistant'
 
 function Logo() {
-  return <Link className="logo" to="/" aria-label="Clare Connects home"><img className="logo-image" src={site.logo} alt="" /><span>Clare <em>Connects</em></span></Link>
+  return <Link className="logo" to="/" aria-label="Clare Connects home"><img className="logo-image" src={site.logo} alt="" loading="eager" decoding="async" /><span>Clare <em>Connects</em></span></Link>
 }
 
 export function Layout() {
