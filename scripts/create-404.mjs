@@ -10,12 +10,12 @@ const fallback = `<!doctype html>
   </head>
   <body>
     <script>
-      const location = window.location
-      const segmentsToKeep = location.hostname.endsWith('github.io') ? 1 : 0
-      const base = location.pathname.split('/').slice(0, segmentsToKeep + 1).join('/')
-      const route = location.pathname.slice(base.length).replace(/^\\/+/, '')
-      const query = location.search ? '&' + location.search.slice(1) : ''
-      location.replace(base + '/?/' + route + query + location.hash)
+      const currentLocation = window.location
+      const segmentsToKeep = currentLocation.hostname.endsWith('github.io') ? 1 : 0
+      const base = currentLocation.pathname.split('/').slice(0, segmentsToKeep + 1).join('/')
+      const route = currentLocation.pathname.slice(base.length).replace(/^\\/+/, '')
+      const query = currentLocation.search ? '&' + currentLocation.search.slice(1) : ''
+      currentLocation.replace(base + '/?/' + route + query + currentLocation.hash)
     </script>
   </body>
 </html>
