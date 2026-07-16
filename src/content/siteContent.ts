@@ -1,3 +1,5 @@
+const asset = (fileName: string) => `${import.meta.env.BASE_URL}assets/${fileName}`
+
 export const site = {
   name: 'Clare Connects',
   url: 'https://clareconnects.com',
@@ -5,9 +7,9 @@ export const site = {
   phone: '', // CONTENT_TODO: confirm Clare's preferred public telephone number.
   responseTime: 'Clare aims to respond within two working days.',
   social: { facebook: '', instagram: '', linkedin: 'https://www.linkedin.com/in/clareconnects/' },
-  logo: '/assets/clare-connects-logo.png',
-  portrait: '/assets/clare-headshot-studio.jpg',
-  portraitWarm: '/assets/clare-headshot-warm.jpg',
+  logo: asset('clare-connects-logo.png'),
+  portrait: asset('clare-headshot-studio.jpg'),
+  portraitWarm: asset('clare-headshot-warm.jpg'),
   links: {
     opportunity: 'https://uw.partners/clare.and.john/join',
     connectorRegistration: 'https://uw.partners/clare.and.john/connect',
