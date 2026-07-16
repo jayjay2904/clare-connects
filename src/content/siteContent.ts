@@ -1,4 +1,5 @@
-const asset = (fileName: string) => `${import.meta.env.BASE_URL}assets/${fileName}`
+const assetBase = window.location.hostname.endsWith('github.io') ? '/clare-connects/' : '/'
+const asset = (fileName: string) => `${assetBase}assets/${fileName}`
 
 export const site = {
   name: 'Clare Connects',
