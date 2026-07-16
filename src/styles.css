@@ -48,7 +48,9 @@
 .presentation-card h3{font-family:var(--serif);font-size:clamp(2rem,3.4vw,3.3rem);line-height:1.08;margin:1rem 0}.presentation-card p{color:#d8ccdf;max-width:520px}
 .presentation-card strong{display:inline-flex;align-items:center;gap:10px;color:var(--pale-gold);border-bottom:1px solid var(--gold);padding-bottom:5px}.presentation-card strong svg{width:19px}
 .team-feature{display:grid;grid-template-columns:1.1fr .9fr;max-width:var(--max);margin:0 auto;padding:clamp(4rem,7vw,7rem) 24px;gap:clamp(2rem,6vw,6rem);align-items:center}
-.team-feature img{width:100%;max-height:760px;object-fit:cover;object-position:center;border-radius:2px;box-shadow:var(--shadow)}
+.team-image-feather{position:relative;background:var(--white);box-shadow:var(--shadow);overflow:hidden}
+.team-image-feather:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,var(--white),transparent 4%,transparent 96%,var(--white)),linear-gradient(to bottom,var(--white),transparent 4%,transparent 100%)}
+.team-feature img{width:100%;height:auto;object-fit:contain;object-position:center;box-shadow:none}
 .team-feature-caption{border-left:1px solid var(--gold);padding-left:clamp(1.5rem,4vw,3.5rem)}
 .team-feature-caption h2{font-size:clamp(2.4rem,4vw,4rem)}
 .team-feature-caption p{color:var(--muted);font-size:1.05rem}
