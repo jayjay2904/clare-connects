@@ -16,7 +16,6 @@ export const site = {
     opportunity: 'https://uw.partners/clare.and.john/partner/join',
     homeUtilities: 'https://uw.partners/clare.and.john/join',
     teamPresentation: 'https://earnuw.co.uk',
-    teamPresentationEmbed: 'https://player.vimeo.com/video/1122152334?title=0&byline=0&portrait=0',
     connectorRegistration: 'https://uw.partners/clare.and.john/connect',
     connectorExplainer: 'https://vimeo.com/1200796333',
   },
