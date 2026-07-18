@@ -68,8 +68,8 @@ export const faqs = {
 }
 
 export const testimonials = [
-  { quote: 'A real customer story will sit here, focusing on the clarity and care Clare brought to the conversation.', label: 'Customer testimonial placeholder' },
-  { quote: 'This space is ready for an approved business client story once Clare has permission to publish it.', label: 'Business testimonial placeholder' },
+  { quote: 'Clare is knowledgeable, approachable, and genuinely cares about finding the right solution for every business. Her friendly, professional approach makes the whole process straightforward and stress-free.', label: 'Business Utilities' },
+  { quote: 'Clare takes the time to explain everything clearly and supports her customers with genuine care and patience. She goes above and beyond to help, making even complex utility decisions feel simple.', label: 'Home Utilities' },
 ]
 
 export const pageMeta: Record<string, { title: string; description: string }> = {
