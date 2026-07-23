@@ -5,9 +5,14 @@ export const site = {
   name: 'Clare Connects',
   url: 'https://clareconnects.com',
   email: 'clare@clareconnects.com',
-  phone: '', // CONTENT_TODO: confirm Clare's preferred public telephone number.
+  phone: '',
+  whatsapp: '',
+  tradingName: '',
+  legalStatus: '',
+  complaintsProcedure: '',
   responseTime: 'Clare aims to respond within two working days.',
   social: { facebook: '', instagram: '', linkedin: 'https://www.linkedin.com/in/clareconnects/' },
+  serviceAreas: ['Staffordshire', 'Stoke-on-Trent', 'Newcastle-under-Lyme', 'Stone', 'Stafford'],
   logo: asset('clare-connects-logo.png'),
   portrait: asset('clare-headshot-studio.jpg'),
   portraitWarm: asset('clare-headshot-warm.jpg'),
@@ -26,8 +31,8 @@ export const nav = [
   { label: 'Home', to: '/' },
   { label: 'Home Utilities', to: '/home-utilities' },
   { label: 'Business Utilities', to: '/business-utilities' },
-  { label: 'Connectors', to: '/connectors' },
-  { label: 'Join the Team', to: '/join' },
+  { label: 'Become a Connector', to: '/connectors' },
+  { label: 'Work With Clare', to: '/join' },
   { label: 'Contact Clare', to: '/contact' },
 ]
 
@@ -67,18 +72,28 @@ export const faqs = {
   ],
 }
 
-export const testimonials = [
-  { quote: 'Clare is knowledgeable, approachable, and genuinely cares about finding the right solution for every business. Her friendly, professional approach makes the whole process straightforward and stress-free.', label: 'Business Utilities' },
-  { quote: 'Clare takes the time to explain everything clearly and supports her customers with genuine care and patience. She goes above and beyond to help, making even complex utility decisions feel simple.', label: 'Home Utilities' },
+export type Testimonial = {
+  quote: string
+  service: string
+  firstName?: string
+  surnameInitial?: string
+  business?: string
+  location?: string
+}
+
+export const testimonials: Testimonial[] = [
+  { quote: 'Clare is knowledgeable, approachable, and genuinely cares about finding the right solution for every business. Her friendly, professional approach makes the whole process straightforward and stress-free.', service: 'Business Utilities' },
+  { quote: 'Clare takes the time to explain everything clearly and supports her customers with genuine care and patience. She goes above and beyond to help, making even complex utility decisions feel simple.', service: 'Home Utilities' },
 ]
 
 export const pageMeta: Record<string, { title: string; description: string }> = {
-  '/': { title: 'Clare Connects | Practical connections for home and business', description: 'One trusted point of contact for household utilities, business essentials and valuable opportunities.' },
-  '/home-utilities': { title: 'Home Utilities | Clare Connects', description: 'A personal, joined-up way to review essential household services.' },
-  '/business-utilities': { title: 'Business Utilities | Clare Connects', description: 'Simplify business utilities, renewals and trusted specialist introductions.' },
-  '/connectors': { title: 'Clare Connectors | Clare Connects', description: 'Create useful introductions and become part of Clare’s trusted network.' },
-  '/join': { title: 'Join the Team | Clare Connects', description: 'Explore a flexible, relationship-led opportunity with Clare and her supportive team.' },
-  '/contact': { title: 'Contact Clare | Clare Connects', description: 'Start a friendly, straightforward conversation with Clare.' },
+  '/': { title: 'Clare Connects | Home and business utilities made simpler', description: 'A friendly point of contact for household services, business utilities and trusted introductions across Staffordshire.' },
+  '/home-utilities': { title: 'Home Utilities in Staffordshire | Clare Connects', description: 'Review household bills and essential services with personal support from Clare Connects.' },
+  '/business-utilities': { title: 'Business Utilities in Staffordshire | Clare Connects', description: 'Discuss business utilities, renewals and trusted specialist introductions with Clare.' },
+  '/connectors': { title: 'Become a Connector | Clare Connects', description: 'Learn how thoughtful referrals work and become part of Clare’s trusted Connector network.' },
+  '/join': { title: 'Work With Clare | Clare Connects', description: 'Explore a flexible, relationship-led business opportunity with Clare and her supportive team.' },
+  '/contact': { title: 'Contact Clare | Clare Connects Staffordshire', description: 'Ask Clare about home utilities, business services, referrals or working with her.' },
   '/privacy': { title: 'Privacy | Clare Connects', description: 'How Clare Connects handles website and enquiry information.' },
-  '/terms': { title: 'Terms | Clare Connects', description: 'Starter website terms for Clare Connects.' },
+  '/cookies': { title: 'Cookies | Clare Connects', description: 'How the Clare Connects website uses essential browser storage.' },
+  '/terms': { title: 'Website Terms | Clare Connects', description: 'Terms for using the Clare Connects website and information about Clare’s role.' },
 }

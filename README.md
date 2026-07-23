@@ -36,31 +36,17 @@ The production site is written to `dist/`. The build also generates a small `404
 
 ## Editing content
 
-Business copy and editable factual details live in `src/content/siteContent.ts`. Values requiring confirmation have a `CONTENT_TODO` comment and are repeated in `CONTENT_TODO.md`. Page-specific editorial copy lives in `src/pages/`.
+Business copy and editable factual details live in `src/content/siteContent.ts`. Optional details awaiting confirmation are listed in `CONTENT_CHECKLIST.md`. Page-specific editorial copy lives in `src/pages/`.
 
 Do not add unverified prices, savings, customer numbers, awards, income examples, provider claims or regulatory language. Keep Clare positioned as a personal contact who works with established providers and specialists.
 
 ## Replacing assets
 
-Public assets live in `public/assets/`; see its README for dimensions. Replace the portrait placeholder, social-sharing image and favicon only with approved, rights-cleared files. Use WebP or AVIF for photographs and preserve their aspect ratios.
+Public assets live in `public/assets/`; see its README for dimensions. Replace photography, the social-sharing image or favicon only with approved, rights-cleared files. Use WebP or AVIF for photographs and preserve their aspect ratios.
 
-## Contact form
+## Enquiries
 
-The form uses the `ContactFormService` interface in `src/services/contact.ts`.
-
-- Without `VITE_CONTACT_ENDPOINT`, a development implementation demonstrates validation, loading and success states. It does not send data. The success message sends users to the email fallback.
-- With `VITE_CONTACT_ENDPOINT`, the browser sends a JSON POST to a secure HTTPS endpoint.
-- The frontend includes a honeypot, accessible error summary, consent control and status announcements. Server-side validation, rate limiting, spam protection, logging and retention rules must be implemented at the endpoint.
-
-Copy `.env.example` to `.env.local` and set:
-
-```text
-VITE_CONTACT_ENDPOINT=https://your-secure-endpoint.example/contact
-```
-
-Suitable options include an Azure Function or Cloudflare Worker for maximum control, a Netlify Function if hosting changes, or Formspree for quicker setup. Formspree is easier but introduces a third-party processor and paid-plan limits. Never put an API key or mail credential in a `VITE_` variable; all such values are public in browser code.
-
-Recommended next step: deploy a small Cloudflare Worker or Azure Function with strict origin checks, schema validation, rate limiting and a server-side email provider. Then update the Privacy page with the processor and retention details.
+Enquiry cards open the visitor's own email application with Clare's address, a suitable subject and a few helpful prompts already prepared. The website does not collect, transmit or store enquiry data. This is a production-safe choice for static hosting and avoids presenting a form that only appears to submit.
 
 ## Assistant
 
@@ -98,8 +84,8 @@ Remove conflicting apex A/AAAA records first. GitHub also supports four IPv6 AAA
 
 Each route updates its title, description, canonical URL and social metadata. The project includes structured service data, `robots.txt`, `sitemap.xml`, semantic landmarks, keyboard support, reduced-motion styling, visible focus treatment, labelled forms, status announcements and a privacy-first cookie notice.
 
-The Privacy and Terms pages are explicitly starter copy. Before launch, complete the business identity, address, retention, lawful basis, processor and jurisdiction details, then obtain appropriate professional review. Do not add non-essential analytics until a consent approach and notice are agreed.
+The Privacy, Cookies and Terms pages describe the site's current behaviour, including direct-email enquiries and essential-only browser storage. Obtain appropriate professional review before launch, then add any confirmed business identity and complaints details listed in `CONTENT_CHECKLIST.md`. Do not add non-essential analytics until a consent approach and notice are agreed.
 
 ## Launch
 
-Use `LAUNCH_CHECKLIST.md` for the final approval sequence. At minimum: replace assets, confirm services, publish consented testimonials, connect the form endpoint, review legal pages, configure DNS, enforce HTTPS and run `npm run check` from a clean clone.
+Use `LAUNCH_CHECKLIST.md` for the final approval sequence. At minimum: confirm services and testimonial permissions, review legal pages, configure DNS, enforce HTTPS and run `npm run check` from a clean clone.

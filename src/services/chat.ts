@@ -4,7 +4,7 @@ const answers: [RegExp, string][] = [
   [/business|utilities/i, 'Clare can help businesses bring utility contracts, connectivity, efficiency and renewal conversations together, with trusted specialist introductions where useful.'],
   [/connector/i, 'A Clare Connector introduces people or organisations who may benefit from Clare’s help. Both informal advocates and professional collaborators are welcome.'],
   [/opportunity|join/i, 'The opportunity may suit people who enjoy helping others and want to build something gradually. Outcomes depend on personal effort and circumstances.'],
-  [/contact|email/i, 'You can email Clare at clare@clareconnects.com or use the contact form. Clare aims to respond within two working days.'],
+  [/contact|email/i, 'You can email Clare directly at clare@clareconnects.com. The website will prepare an email with a few helpful prompts, and Clare aims to respond within two working days.'],
 ]
 export class DemoChatService implements ChatService {
   async reply(question: string) { await new Promise((r) => setTimeout(r, 450)); return answers.find(([test]) => test.test(question))?.[1] ?? 'I can help with home services, business utilities, Clare Connectors and the opportunity. For anything more specific, please contact Clare.' }

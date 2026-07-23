@@ -19,7 +19,7 @@ export function Layout() {
     <header className="header">
       <div className="header-inner"><Logo />
         <nav className="desktop-nav" aria-label="Main navigation">{nav.slice(0, 5).map((item) => <NavLink key={item.to} to={item.to}>{item.label}</NavLink>)}</nav>
-        <Link className="button button-small header-cta" to="/contact">Talk to Clare <ArrowUpRight size={16} /></Link>
+        <Link className="button button-small header-cta" to="/contact">Ask Clare a question <ArrowUpRight size={16} /></Link>
         <button className="menu-button" aria-label="Open menu" aria-expanded={open} onClick={() => setOpen(true)}><Menu /></button>
       </div>
     </header>
@@ -29,7 +29,7 @@ export function Layout() {
       <a className="mobile-email" href={`mailto:${site.email}`}>{site.email}</a>
     </div>}
     <main id="main"><Outlet /></main>
-    <footer className="footer"><div className="footer-top"><div><Logo /><p>Practical help, useful introductions and one trusted point of contact.</p></div><div><h2>Explore</h2>{nav.map((item) => <Link key={item.to} to={item.to}>{item.label}</Link>)}</div><div><h2>Stay connected</h2><a href={`mailto:${site.email}`}>{site.email}</a><a className="social-link" href={site.social.linkedin} target="_blank" rel="noreferrer">Clare on LinkedIn <ArrowUpRight size={15} /></a><p>{site.responseTime}</p><Link className="text-link" to="/contact">Start a conversation <ArrowUpRight size={16} /></Link></div></div><div className="footer-bottom"><div className="footer-meta"><span>© {new Date().getFullYear()} Clare Connects</span><span className="ob-labs-credit"><img src={site.obLabsLogo} alt="" loading="lazy" decoding="async" />Website is designed and created by OB Labs</span></div><div className="footer-links"><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></div><span className="made"><Sparkles size={14} /> Thoughtfully connected</span></div></footer>
+    <footer className="footer"><div className="footer-top"><div><Logo /><p>Practical help, useful introductions and one trusted point of contact.</p><p className="footer-area">Supporting conversations across {site.serviceAreas.join(', ')}.</p></div><div><h2>Explore</h2>{nav.map((item) => <Link key={item.to} to={item.to}>{item.label}</Link>)}</div><div><h2>Stay connected</h2><a href={`mailto:${site.email}`}>{site.email}</a><a className="social-link" href={site.social.linkedin} target="_blank" rel="noreferrer">Clare on LinkedIn <ArrowUpRight size={15} /></a><p>{site.responseTime}</p><Link className="text-link" to="/contact">Ask Clare a question <ArrowUpRight size={16} /></Link></div></div><div className="footer-bottom"><div className="footer-meta"><span>© {new Date().getFullYear()} Clare Connects</span><span className="ob-labs-credit"><img src={site.obLabsLogo} alt="" loading="lazy" decoding="async" />Website is designed and created by OB Labs</span></div><div className="footer-links"><Link to="/privacy">Privacy</Link><Link to="/cookies">Cookies</Link><Link to="/terms">Terms</Link></div><span className="made"><Sparkles size={14} /> Thoughtfully connected</span></div></footer>
     <Assistant />
     <CookieNotice />
   </div>
